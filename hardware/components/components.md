@@ -61,7 +61,6 @@ This document lists every electromechanical component used on our WRO 2026 Futur
 - **Connections used:** VCC, GND, Trig (output from Pi), Echo (input to Pi) per sensor — see the wiring documentation for the exact GPIO pins.
 - **Why chosen:** the HY-SRF05 is inexpensive, low current draw (fits the powerbank budget), and fast enough to act as a reliable last-resort safety check independent of camera lighting conditions.
 
-
 ---
 
 ## Battery Pack — 4× 18650 Li-ion Cells + 4-Cell Battery Box
@@ -82,7 +81,6 @@ This document lists every electromechanical component used on our WRO 2026 Futur
 - **Role:** 5V logic-side power source for the whole electronics stack: Raspberry Pi 5, camera, both ultrasonic sensors, the servo, and the logic side of the L298N. Rated at a maximum output of 22.5 W, which we treat as a hard design constraint (see `wiring.md` for the power-budget reasoning).
 - **Why chosen:** 10000 mAh gives enough runtime for a full competition day of practice + rounds, the digital display lets us monitor remaining charge between rounds, and fast-charging support means it can be topped up quickly during breaks.
 
-
 ---
 
 ## 5V Cooling Fan
@@ -93,6 +91,14 @@ This document lists every electromechanical component used on our WRO 2026 Futur
 - **Powered from:** the 5V powerbank, alongside the rest of the logic-side electronics.
 - **Why chosen:** the Raspberry Pi 5 runs noticeably hotter than previous Pi models under sustained camera-processing load; active cooling keeps performance consistent across a full 3-minute round and back-to-back rounds during the competition day.
 
+---
+
+## Status LED (Code-Running Indicator)
+
+![Status LED](<led.png>)
+
+- **Role:** Paired with current-limiting resistor R1, this LED is driven by a GPIO output and lights up specifically to indicate that **the control program is running** — not simply that the vehicle is powered on. This gives judges and team members an immediate visual check, from outside the vehicle, of whether the program has actually started after the push button is pressed.
+- **Why chosen:** a simple, low-current visual indicator that requires only one GPIO pin and a resistor, with no impact on the power budget, while making the vehicle's state easy to verify during checks and rounds.
 
 ---
 
@@ -100,7 +106,7 @@ This document lists every electromechanical component used on our WRO 2026 Futur
 
 ![Mini breadboard](<mini_breadboard.png>)
 
-- **Role:** Used to prototype and hold the small supporting circuit — the LED (D1) with its current-limiting resistor (R1), which lights up specifically to indicate that **the control program is running** (not just that the vehicle is powered on) — and the push-button (SW1) used as the mandatory WRO **Start button** — before/instead of a soldered board.
+- **Role:** Used to prototype and hold the small supporting circuit — the status LED (D1/R1, described above) and the push-button (SW1) used as the mandatory WRO **Start button** — before/instead of a soldered board.
 - **Why chosen:** allows quick iteration on the LED/button circuit during development without committing to solder, while keeping the wiring simple enough to be reliable in competition.
 
 ---
@@ -118,5 +124,6 @@ This document lists every electromechanical component used on our WRO 2026 Futur
 | 4× 18650 Li-ion Cells + Battery Box | Power | — (source itself) |
 | Joyroom 10000 mAh Powerbank | Power | — (source itself) |
 | 5V Cooling Fan | Power (thermal management) | 5V Powerbank |
-| Status/Running LED + Push Button | Supporting circuit (code-running indicator + start button) | 5V Powerbank (via Pi) |
+| Status LED (code-running indicator) | Supporting circuit | 5V Powerbank (via Pi) |
+| Push Button (Start button) | Supporting circuit | 5V Powerbank (via Pi) |
 | Mini Breadboard | Supporting circuit (holds LED + start button) | — (passive) |
