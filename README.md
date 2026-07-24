@@ -10,7 +10,7 @@ Charbel Khalife <br>
 
 ## Robot: "Lightning McQueen"
 
-> **TODO:** Add a hero photo of the finished robot here, e.g. `media/robot-photos/hero.jpg`.
+![Robot Photos](media\robot-photos\version2\left.png)
 
 ## Content
 
