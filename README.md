@@ -16,10 +16,10 @@ Charbel Khalife <br>
 
 | Folder | Content |
 | -- | -- |
-| [docs](docs) | [Engineering Journal](docs/Mindscape_1_Engineering_Journal.pdf), [Open Challenge flowchart](docs/open-challenge-flowchart.png), [testing log](docs/testing-results.md), [wiring photo](docs/WRO26_wirings.png) |
+| [docs](docs) | [Engineering Journal](docs/Mindscape_1_Engineering_Journal.pdf), [Open Challenge flowchart](docs/open-challenge-flowchart.png), [testing log](docs/testing-results.md), [wiring photo](docs\WRO26 wirings.png) |
 | [hardware/cad-files](hardware/cad-files) | [Version 1](hardware/cad-files/version1), [Final Design (Version 2)](hardware/cad-files/version2), [redesign write-up](hardware/cad-files/cad-files.md) |
 | [hardware/components](hardware/components) | [Full component list & specs](hardware/components/components.md), one reference photo per part |
-| [hardware/components/wiring-files](hardware/components/wiring-files) | [Wiring reasoning & GPIO map](hardware/components/wiring-files/wiring.md), schematic and camera-wiring photos |
+| [hardware/components/wiring-files](hardware\wiring-files) | [Wiring reasoning & GPIO map](hardware\wiring-files\wiring.md), schematic and camera-wiring photos |
 | [media/robot-photos](media/robot-photos) | Robot photos — Version 1 and Final Design, all sides |
 | [media/team-photos](media/team-photos) | Team photo(s) |
 | [src/open_challenge](src/open_challenge) | Open Challenge code (`race.py` and support modules) |
@@ -34,13 +34,13 @@ The self-driving car challenge this season is a Time Attack race: there is not m
 
 ### Open Challenge
 
-![Open Challenge Field](docs/open-challenge-field.jpg)
+![Open Challenge Field](docs/open-challenge-field.png)
 
 The vehicle must complete three (3) laps on the track, with the inner track walls randomly placed each round. This means the robot can't rely on a fixed track shape — it has to recognize and react to the field it's actually driving in. Our approach (detailed in the [Engineering Journal](docs/Mindscape_1_Engineering_Journal.pdf) and [`src/open_challenge`](src/open_challenge)) uses the camera to balance wall coverage on the left and right rather than following a fixed path, so it adapts automatically to whatever wall layout that round has.
 
 ### Obstacle Challenge
 
-![Obstacle Challenge Field](docs/obstacle-challenge-field.jpg)
+![Obstacle Challenge Field](docs/obstacle-challenge-field.png)
 
 The vehicle must complete three (3) laps on the track with red and green traffic signs randomly placed along the way. Each traffic sign dictates which side of the lane the robot must pass it on, and the robot must complete the full run without knocking any of them down. The round also ends with a parking maneuver in a designated zone.
 
