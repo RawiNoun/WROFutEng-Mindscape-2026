@@ -4,9 +4,9 @@ This document lists every electromechanical component used on our WRO 2026 Futur
 
 ---
 
-## Raspberry Pi 5 (4GB)
+## Raspberry Pi 5 (8GB)
 
-![Raspberry Pi 5 4GB](<RPI5_4gb.png>)
+![Raspberry Pi 5 8GB](<RPI5_8gb.png>)
 
 - **Role:** Main single-board computer (SBC) for the vehicle. Runs the control program: reads the camera and ultrasonic sensors, decides steering/driving commands, and sends them to the servo and the L298N motor driver.
 - **Why chosen:** CPU power to run our camera-based wall-percentage detection and traffic-sign recognition in real time, while still fitting the vehicle's power budget on the 5V powerbank.
@@ -115,7 +115,7 @@ This document lists every electromechanical component used on our WRO 2026 Futur
 
 | Component | Category (WRO focus area) | Powered from |
 |---|---|---|
-| Raspberry Pi 5 (4GB) | Sense / Power (controller) | 5V Powerbank |
+| Raspberry Pi 5 (8GB) | Sense / Power (controller) | 5V Powerbank |
 | Raspberry Pi Camera v2 (8MP) | Sense | 5V Powerbank (via Pi) |
 | Servo Motor SG90 | Mobility (steering) | 5V Powerbank (via Pi) |
 | DC Motor (yellow gearbox) | Mobility (driving) | 4× 18650 Battery Pack (via L298N) |
