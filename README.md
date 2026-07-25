@@ -20,7 +20,7 @@ Charbel Khalife <br>
 | [docs](docs) | [Engineering Journal](docs/Mindscape_1_Engineering_Journal.pdf), [Open Challenge flowchart](docs/open-challenge-flowchart.png), [testing log](docs/testing-results.md), [wiring photo](docs\WRO26 wirings.png) |
 | [hardware/cad-files](hardware/cad-files) | [Version 1](hardware/cad-files/version1), [Final Design (Version 2)](hardware/cad-files/version2), [redesign write-up](hardware/cad-files/cad-files.md) |
 | [hardware/components](hardware/components) | [Full component list & specs](hardware/components/components.md), one reference photo per part |
-| [hardware/components/wiring-files](hardware\wiring-files) | [Wiring reasoning & GPIO map](hardware\wiring-files\wiring.md), schematic and camera-wiring photos |
+| [hardware/components/wiring-files](hardware/wiring-files) | [Wiring reasoning & GPIO map](hardware/wiring-files/wiring.md), schematic and camera-wiring photos |
 | [media/robot-photos](media/robot-photos) | Robot photos — Version 1 and Final Design, all sides |
 | [media/team-photos](media/team-photos) | Team photo(s) |
 | [src/open_challenge](src/open_challenge) | Open Challenge code (`race.py` and support modules) |
