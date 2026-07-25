@@ -67,6 +67,70 @@ We returned to the ROI/box-based camera strategy — by this point our strongest
 
 ## Obstacle Challenge Testing Log
 
-<!-- TODO: fill in once the Obstacle Challenge code and testing are done —
-     strategies tried, what failed and why, and how we arrived at the final
-     pillar-avoidance and parking logic, in the same format as above. -->
+This log documents the development process behind our Obstacle Challenge software, following the same philosophy as the Open Challenge. Rather than immediately arriving at the final solution, we evaluated several navigation strategies, analyzed their shortcomings, and gradually refined the system until it became reliable enough for competition.
+
+---
+
+## 1. Attempt 1 — Dynamic Curve-Fitting
+
+**Strategy:** Extend the dynamic curve-fitting approach originally investigated during the Open Challenge by calculating a smooth path around each traffic-sign pillar and steering along that curve in real time.
+
+**Result:** Failed. Although the idea appeared promising, generating an accurate curve every frame proved extremely difficult. Small variations in the detected position of the pillars caused large changes in the generated path, resulting in inconsistent steering and unreliable obstacle avoidance.
+
+**Outcome:** Since we had already experienced similar limitations in the Open Challenge, we decided to abandon the curve-fitting approach entirely and investigate a more deterministic solution.
+
+---
+
+## 2. Attempt 2 — ROI-Based Detection
+
+**Strategy:** Build upon the Region-of-Interest (ROI) concept developed for the Open Challenge by dividing the camera image into several dedicated regions responsible for detecting traffic signs, nearby walls, and other important field elements.
+
+**Result:** Partially successful. The robot was now capable of detecting traffic signs and reacting to them, but the behaviour was still inconsistent. The initial implementation contained only a small number of ROIs and decision conditions, making the robot vulnerable to incorrect detections and poorly timed steering corrections.
+
+---
+
+## 3. Incremental Development
+
+Rather than replacing the entire navigation algorithm after each unsuccessful test, we chose to improve the ROI strategy incrementally. Each new condition was introduced individually, tested thoroughly, and only then integrated into the complete obstacle challenge program.
+
+Over multiple testing sessions we gradually added:
+
+- Dedicated ROIs for traffic-sign detection.
+- Additional wall-monitoring regions to maintain vehicle positioning while approaching obstacles.
+- Separate navigation states for normal driving, obstacle avoidance, and recovery.
+- Additional safety conditions to reject false detections and improve overall consistency.
+
+This modular development process made debugging significantly easier, as every new behaviour could be evaluated independently before interacting with the rest of the software.
+
+---
+
+## 4. Steering Mechanism Issue
+
+During testing we encountered a problem that was not caused by the software itself but by the steering mechanism. Under certain conditions, the steering assembly struggled to rotate sufficiently toward the left, causing inconsistent left turns despite the software producing the correct steering commands.
+
+Completely redesigning the steering mechanism was not feasible within the available competition timeframe, so we developed a software workaround instead.
+
+**Solution:** Whenever the robot needed to perform a significant left turn, it briefly reversed before steering left. This relieved the mechanical load on the steering linkage, allowing the wheels to reach the required steering angle before continuing forward.
+
+**Result:** Although initially intended as a temporary workaround, repeated testing showed that this method consistently improved left-turn reliability and therefore became part of the final obstacle challenge program.
+
+---
+
+## 5. Final Validation
+
+After integrating all navigation states, obstacle detection routines, steering corrections, and recovery behaviours, we performed repeated full-course tests using different randomized obstacle configurations.
+
+The primary objective during this phase was to verify that improvements made to one behaviour did not negatively affect another. Through continuous testing, threshold tuning, and parameter adjustments, the obstacle challenge software gradually evolved into the final version included in our repository.
+
+**Result:** Working. The final implementation combines ROI-based computer vision, state-machine navigation, and a software-assisted steering workaround to produce reliable obstacle avoidance under randomized competition conditions.
+
+---
+
+## Summary Table
+
+| # | Strategy | Result | Why |
+|---|---|---|---|
+| 1 | Dynamic curve-fitting | Failed | Generated path was too unstable for reliable obstacle avoidance. |
+| 2 | Initial ROI-based obstacle detection | Partially successful | Detection worked, but additional ROIs and decision conditions were required. |
+| 3 | Incremental ROI development | Working | Added navigation states, ROIs, and safety checks progressively until behaviour became reliable. |
+| 4 | Steering workaround | Working | Reverse-before-left manoeuvre compensated for the steering mechanism's left-turn limitation. |
