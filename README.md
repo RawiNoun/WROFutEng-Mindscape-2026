@@ -2,16 +2,20 @@
 # Lightning McQueen
 
 ## Team Members
-Joe Abeid <br>
-Charbel Ghanem <br>
-Charbel Khalife <br>
 
-![Official Photo](media/team-photos/official-photo.png)
-![Funny Photo](media/team-photos/funny-photo.png)
+<p>
+  <img src="media/team-photos/official-photo.png" alt="Photo 1" width="45%">
+  <img src="media/team-photos/funny-photo.png" alt="Photo 2" width="45%">
+</p>
+
+<strong>
+•Charbel Ghanem<br>
+•Charbel Khalife<br>
+•Joe Obeid<br><strong>
 
 ## Robot: "Lightning McQueen"
 
-![Robot Photos](media\robot-photos\version2\left.png)
+![Robot Photos](media/robot-photos/version2/left.png)
 
 ## Content
 
