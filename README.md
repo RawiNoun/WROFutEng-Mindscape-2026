@@ -50,7 +50,7 @@ The vehicle must complete three (3) laps on the track, with the inner track wall
 The vehicle must complete three (3) laps on the track with red and green traffic signs randomly placed along the way. Each traffic sign dictates which side of the lane the robot must pass it on, and the robot must complete the full run without knocking any of them down. The round also ends with a parking maneuver in a designated zone.
 
 > **TODO — everything below still needed for the Obstacle Challenge:**
-> - Final strategy write-up (how the robot decides which side to pass each sign on, and how parking is detected/executed)
+> - Final strategy write up (how the robot decides which side to pass each sign on, and how parking is detected/executed)
 > - Code in [`src/obstacle_challenge`](src/obstacle_challenge)
 > - Section 4.8 of the Engineering Journal
 > - Obstacle Challenge entry in [`docs/testing-results.md`](docs/testing-results.md)
