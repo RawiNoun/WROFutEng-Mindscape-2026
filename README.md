@@ -6,7 +6,8 @@ Joe Abeid <br>
 Charbel Ghanem <br>
 Charbel Khalife <br>
 
-> **TODO:** Add team photo here, e.g. `media/team-photos/official.jpg`.
+![Official Photo](media\team-photos\official-photo.png)
+![Funny Photo](media\team-photos\funny-photo.png)
 
 ## Robot: "Lightning McQueen"
 
