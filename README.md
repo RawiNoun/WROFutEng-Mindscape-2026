@@ -6,8 +6,8 @@ Joe Abeid <br>
 Charbel Ghanem <br>
 Charbel Khalife <br>
 
-![Official Photo](media\team-photos\official-photo.png)
-![Funny Photo](media\team-photos\funny-photo.png)
+![Official Photo](media/team-photos/official-photo.png)
+![Funny Photo](media/team-photos/funny-photo.png)
 
 ## Robot: "Lightning McQueen"
 
