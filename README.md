@@ -3,11 +3,6 @@
 
 ## Team Members
 
-<p>
-  <img src="media/team-photos/official-photo.png" alt="Photo 1" width="45%">
-  <img src="media/team-photos/funny-photo.png" alt="Photo 2" width="45%">
-</p>
-
 <strong>
 •Charbel Ghanem<br>
 •Rawi Noun<br>
