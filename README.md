@@ -10,7 +10,7 @@
 
 <strong>
 •Charbel Ghanem<br>
-•Charbel Khalife<br>
+•Rawi Noun<br>
 •Joe Obeid<br><strong>
 
 ## Robot: "Lightning McQueen"
